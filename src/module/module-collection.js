@@ -8,9 +8,7 @@ export default class ModuleCollection {
   }
 
   get (path) {
-    return path.reduce((module, key) => {
-      return module.getChild(key)
-    }, this.root)
+    return path.reduce((module, key) => module.getChild(key), this.root)
   }
 
   getNamespace (path) {
